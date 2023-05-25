@@ -333,20 +333,33 @@ column-gap: var(--indent-vertical);
 .card-set-items {
 flex-basis: calc((100% - (var(--indent-vertical))* var(--items)-1)/ var(--items));
 }
-.work-title {
+.work-title {    
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.11;           
+    line-height: 1.11;
     text-align: center;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: var(--main-color);
-    margin-bottom: 72px; 
+    margin-bottom: 72px;    
 }
-/* .work-list {
-    display: flex;
-    gap: 24px;
-} */
+@media only screen and (max-width: 767px) {
+    .section-three {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1157px) {
+    .section-three {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1158px) {
+.card-set {
+    --items: 3;
+  }
+}
+
 /* Our team */
 .our-team-list {
     --indent-vertical: 24px;
@@ -396,9 +409,7 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: var(--text-color);
 }
-/* .our-team-list {
-    --items: 1;    
-} */
+
 .team-cards {
     background:var(--color-for-theme-dark);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -468,10 +479,7 @@ color: var(--text-color);
 }
 .customers-list-item {
     flex-basis: calc((100% - (var(--indent-vertical))* var(--items)-1)/ var(--items));
-    height: 88px;
-    
-    /* width: calc((100%-16px)/2); */
-    
+    height: 88px; 
 }
 
 .customers {
@@ -499,6 +507,11 @@ color: var(--text-color);
 .footer { 
     background-color: var(--main-color);
     padding: 96px 0;
+}
+@media only screen and (min-width: 1158px) {
+.footer{
+    padding: 100px 0;
+  }
 }
 .footer-box {
     display: flex;
@@ -531,20 +544,45 @@ color: var(--text-color);
     text-transform: uppercase;
     color: var(--primery-brend);      
 }
-@media only screen and (min-width: 768px) {
-.left-footer{
-    display: flex;    
-    flex-direction: column;
 
-  }
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+@media only screen and (min-width: 768px) {
+    .footer-container {
+        
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+}
+
 @media only screen and (min-width: 1158px) {
-.left-footer{
-    margin-right: 120px;
-    margin-top: 100px;
-    margin-bottom: 100px;
-  }
-}  
+    .footer-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-right: 96px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .left-footer {
+        display: flex;
+        flex-direction: column;
+        margin-left: 108px;
+        margin-right: auto;
+
+    }
+}
+
+@media only screen and (min-width: 1158px) {
+    .left-footer {
+        margin-right: 120px;
+
+        
+    }
+}
 .rihgt-footer {
     display: flex;
     flex-direction: column;
@@ -559,6 +597,12 @@ color: var(--text-color);
     letter-spacing: 0.02em;
     color: var(--color-for-theme-dark);
     margin-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+.footer-text{
+    
+    text-align: left;
+  }
 }
 .footer-list {
     display: flex;
@@ -586,24 +630,8 @@ background-color: var(--green);
 .icons {
     fill: var(--light-mode);
 }
-.footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-@media only screen and (min-width: 768px) {
-.footer-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-}
-@media only screen and (min-width: 1158px) {
-.footer-container{
-    display: flex;
-    align-items: flex-start;
-  }
-}
+
+
 /* Footer email */
 /* .footer-email-form {
     display: flex;
@@ -621,7 +649,8 @@ background-color: var(--green);
 
 @media only screen and (min-width: 1158px) {
 .footer-email-form-parts{
-    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
     gap: 16px;
   }
 }
@@ -659,13 +688,8 @@ background-color: var(--green);
          margin-left: auto;
      }
  }
-
- @media only screen and (min-width: 1158px) {
-     .footer-email-form {
-         display: inline-block;
-         margin-left: auto;
-     }
- }
+ 
+ 
  .footer-email-input::placeholder {
     font-weight: 400;
     font-size: 12px;
