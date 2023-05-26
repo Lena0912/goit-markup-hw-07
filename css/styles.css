@@ -329,10 +329,14 @@ display: flex;
 flex-wrap: wrap;
 row-gap: var(--indent);
 column-gap: var(--indent-vertical);
+justify-content: center;
 }
+@media only screen and (min-width: 768px) {
 .card-set-items {
-flex-basis: calc((100% - (var(--indent-vertical))* var(--items)-1)/ var(--items));
-}
+    flex-basis: calc((100% - (var(--indent-vertical))* var(--items)-1)/ var(--items));
+    }
+  }
+
 .work-title {    
     font-weight: 700;
     font-size: 36px;
@@ -641,7 +645,7 @@ background-color: var(--green);
 } */
 
 .footer-email-form-parts {
-    display: flex;    
+       
     flex-direction: column; 
     align-items: center;
     margin-bottom: 16px;
@@ -663,6 +667,11 @@ background-color: var(--green);
     margin-bottom: 16px;
     display: flex;
    justify-content: center;
+}
+@media only screen and (min-width: 768px) {
+.footer-subscribe-text{
+    display: block;
+  }
 }
 
  .footer-email-input {
@@ -689,7 +698,6 @@ background-color: var(--green);
      }
  }
  
- 
  .footer-email-input::placeholder {
     font-weight: 400;
     font-size: 12px;
@@ -710,7 +718,9 @@ background-color: var(--green);
     border-radius: 4px;
     border: none;
     position: relative;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);   
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+    text-align: center;  
+    
 }
 .footer-btn-title {
     color: var(--color-for-theme-dark);
@@ -946,13 +956,10 @@ align-items: center;
 padding: 0;
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-
 .modal-close-btn:hover,
 .modal-close-btn:focus {
 border: none;
-background-color: var(--accent-color);
-
+background-color: var(--accent-color); 
 }
 .close-modal-btn-icon {
     transition: fill var(--transition-duration-and-functoin);
