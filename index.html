@@ -76,7 +76,7 @@
                 </use>
               </svg> 
             </div>
-            <h3 class="feacher">Strategy</h3>
+            <h3 class="feacher heading">Strategy</h3>
             <p class="feacher-discr">
               Our goal is to identify the business problem to walk away with the
               perfect and creative solution.
@@ -89,7 +89,7 @@
                 </use>
               </svg> 
             </div>
-            <h3 class="feacher">Punctuality</h3>
+            <h3 class="feacher heading">Punctuality</h3>
             <p class="feacher-discr">
               Bring the key message to the brand's audience for the best price
               within the shortest possible time.
@@ -102,7 +102,7 @@
                 </use>
               </svg> 
             </div>
-            <h3 class="feacher">Diligence</h3>
+            <h3 class="feacher heading">Diligence</h3>
             <p class="feacher-discr">
               Research and confirm brands that present the strongest digital
               growth opportunities and minimize risk.
@@ -115,7 +115,7 @@
                 </use>
               </svg> 
             </div>
-            <h3 class="feacher">Technologies</h3>
+            <h3 class="feacher heading">Technologies</h3>
             <p class="feacher-discr">
               Design practice focused on digital experiences. We bring forth a
               deep passion for problem-solving.
@@ -129,12 +129,34 @@
         <div class="container">
         <h2 class="work-title">What are we doing</h2>
         <ul class="list work-list card-set">
-          <li class="card-set-items"><img src="./images/monitor.jpg" alt="monitor" width="360"></li>
           <li class="card-set-items">
-            <img src="./images/imgsmatrphone-screens.jpg" alt="smatrphone-screens" width="360">
+            <picture>
+                      <source
+                      srcset="./images/monitordesk@1x.jpg 1x, ./images/monitordesk@2x.jpg 2x"
+                      media="(min-width: 1158px)"
+                      />                      
+                      <img src="./images/monitordesk@1x.jpg" alt="monitor" width="360">                      
+                    </picture>            
           </li>
           <li class="card-set-items">
-            <img src="./images/imgsmartphone-in-the-hand.jpg" alt="smartphone-in-the-hand" width="360">
+            <picture>
+                      <source
+                      srcset="./images/imgsmatrphone-screensdesk@1x.jpg 1x, ./images/imgsmatrphone-screensdesk@2x.jpg 2x"
+                      media="(min-width: 1158px)"
+                      />                      
+                      <img src="./images/imgsmatrphone-screens.jpg" alt="smatrphone-screens" width="360">
+                    </picture>
+            
+          </li>
+          <li class="card-set-items">
+            <picture>
+                      <source
+                      srcset="./images/imgsmartphone-in-the-handdesk@1x.jpg 1x, ./images/imgsmartphone-in-the-handdesk@2x.jpg 2x"
+                      media="(min-width: 1158px)"
+                      />                      
+                      <img src="./images/imgsmatrphone-screens.jpg" alt="smartphone-in-the-hand" width="360">
+                    </picture>
+            
           </li>
         </ul>
         </div>
@@ -145,7 +167,10 @@
         <h2 class="work-title">Our Team</h2>
         <ul class="list our-team-list card-set">
           <li class="team-cards card-set-items">
-            <img src="./images/mark.jpg" alt="Mark-Guerrero" width="264">
+            <img 
+            srcset="./images/markmob@2x.jpg 2x"
+            src="./images/mark.jpg" 
+            alt="Mark-Guerrero" width="264">
             <div class="name-role">
               <h3 class="team-name">Mark Guerrero</h3>
               <p class="team-discr">Product Designer</p>
@@ -182,7 +207,10 @@
             </div>
           </li>
           <li class="team-cards card-set-items">
-            <img src="./images/tom.jpg" alt="Tom-Ford" width="264">
+            <img 
+            srcset="./images/tommob@2x-1.jpg 2x"
+            src="./images/tom.jpg" 
+            alt="Tom-Ford" width="264">
             <div class="name-role">
             <h3 class="team-name">Tom Ford</h3>
             <p class="team-discr">Frontend Developer</p>
@@ -219,7 +247,10 @@
             </div>
           </li>
           <li class="team-cards card-set-items">
-            <img src="./images/camila.jpg" alt="Camila-Garcia" width="264">
+            <img
+            srcset="./images/camilamob@2x-2.jpg 2x" 
+            src="./images/camila.jpg" 
+            alt="Camila-Garcia" width="264">
             <div class="name-role">
             <h3 class="team-name">Camila Garcia</h3>
             <p class="team-discr">Marketing</p>
@@ -256,7 +287,10 @@
             </div>
           </li>
           <li class="team-cards card-set-items">
-            <img src="./images/daniel.jpg" alt="Daniel-Wilson" width="264">
+            <img 
+            srcset="./images/danielmob@2x-3.jpg 2x"
+            src="./images/daniel.jpg" 
+            alt="Daniel-Wilson" width="264">
             <div class="name-role">
             <h3 class="team-name">Daniel Wilson</h3>
             <p class="team-discr">UI Designer</p>
@@ -476,13 +510,13 @@
       </button>
 
       <ul class="mobile-menu list">
-        <li class="mobile-links"><a href="" class="mobile-link">Studio</a></li>
+        <li class="mobile-links"><a href="" class="mobile-link mobile-link-studio">Studio</a></li>
         <li class="mobile-links"><a href="" class="mobile-link">Portfolio</a></li>
         <li class="mobile-links"><a href="" class="mobile-link">Contacts</a></li>        
       </ul>
       <ul class="mobile-contacts list">
-        <li class="mobile-tel"><a href="tel:+110001111111" class="mobile-link-contacts">+11 (000) 111-11-11</a></li>
-        <li class="mobile-email"><a href="mailto:info@devstudio.com" class="mobile-link-contacts">info@devstudio.com</a></li>
+        <li class=""><a href="tel:+110001111111" class="mobile-link-contacts mobile-tel">+11 (000) 111-11-11</a></li>
+        <li class=""><a href="mailto:info@devstudio.com" class="mobile-link-contacts mobile-email">info@devstudio.com</a></li>
         
       </ul>
       <ul class="mobile-socials list">
