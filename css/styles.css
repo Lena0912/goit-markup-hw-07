@@ -770,6 +770,7 @@ background-color: var(--green);
     padding-left: 12px;
  }
 .footer-subscribe-btn {
+    display: block;
     min-width: 165px;
     height: 40px;    
     background-color: var(--primery-brend);
