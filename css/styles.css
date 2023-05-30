@@ -1346,6 +1346,7 @@ color: var(--accent-color);
     text-transform: capitalize;
     color: var(--text-color);
 }
+
 .mobile-tel {
     font-weight: 700;
     font-size: 24px;
@@ -1366,9 +1367,8 @@ color: var(--accent-color);
     color: var(--text-color);    
 }
 .mobile-link-studio {
-    color: var(--primery-brend);
-    margin-bottom: 40px;
+    color: var(--primery-brend);    
 }
-.mobile-link-portfolio {
+.mobile-links-margin {
     margin-bottom: 40px;
 }
