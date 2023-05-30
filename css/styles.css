@@ -525,6 +525,7 @@ color: var(--text-color);
     margin-bottom: 72px;
 }
 
+
 .customers-list {
     display: flex;
     flex-wrap: wrap;
@@ -603,9 +604,19 @@ color: var(--text-color);
   }
 }
 @media only screen and (max-width: 767px) {
-  .element.style {
+  .container-style {
     display: flex;
     flex-direction: column;
+  }
+}
+@media only screen and (min-width: 768px) {
+.container-style{
+    max-width: 552px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .container-style {
+    max-width: 1128px;
   }
 }
 .footer-box {
