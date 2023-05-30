@@ -583,10 +583,23 @@ color: var(--text-color);
     padding: 100px 0;
   }
 }
-
-@media only screen and (min-width: 768px) {
 .footer-elements {
     display: flex;
+    flex-direction: column;
+    row-gap: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .footer-elements {
+    display: flex;
+    flex-direction: row;
+    column-gap: 24px;
+    margin-bottom: 72px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+.footer-elements{
+    column-gap: 120px;
+    margin-bottom: 0;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -646,23 +659,21 @@ color: var(--text-color);
 @media only screen and (min-width: 1158px) {
     .footer-container {
         display: flex;
-        flex-direction: row;        
+        flex-direction: row; 
+        justify-content: space-between;   
         }
 }
-.left-footer {
-    margin-bottom: 72px;
-}
+
 @media only screen and (min-width: 768px) {
     .left-footer {
         display: flex;
-        flex-direction: column;        
-        margin-right: 24px;
-        margin-bottom: 72px;
+        flex-direction: column;
+        margin-bottom: 0;        
     }
 }
 @media only screen and (min-width: 1158px) {
     .left-footer {
-        margin-right: 120px;
+        margin-right: 0;
         margin-bottom: 0;
     }
 }
@@ -671,6 +682,7 @@ color: var(--text-color);
     flex-direction: column;
     align-items: center;
     margin-bottom: 72px;
+    
 }
 @media only screen and (min-width: 768px) {
 .rihgt-footer{
@@ -681,7 +693,7 @@ color: var(--text-color);
 @media only screen and (min-width: 1158px) {
 .rihgt-footer {
     align-items: flex-start;
-    margin-right: 80px;
+    margin-right: 0;
     margin-bottom: 0;
   }
 }
@@ -739,11 +751,15 @@ background-color: var(--green);
 
 } */
 
-.footer-email-form-parts {
-     
+.footer-email-form-parts {     
     flex-direction: column; 
     align-items: center;
     margin-bottom: 16px;
+}
+@media only screen and (min-width: 768px) {
+.footer-email-form-parts {
+    margin-bottom: 0;
+  }
 }
 
 @media only screen and (min-width: 1158px) {
@@ -768,10 +784,11 @@ background-color: var(--green);
 @media only screen and (min-width: 768px) {
     .footer-subscribe-text {
         margin-left: 0;
+        margin-right: 0;
     }
 }
 
- .footer-email-input.footer-email-input {
+ .footer-email-input {
     width: 100%;
     height: 40px;
     background-color: transparent;
@@ -783,13 +800,19 @@ background-color: var(--green);
     margin-bottom: 16px;  
  } 
  @media only screen and (min-width: 768px) {
+    .footer-email-input{
+     margin-bottom: 0;
+   }
+ }
+ @media only screen and (min-width: 768px) {
      .footer-email-form {
          display: flex;
          gap: 24px;
+         margin-bottom: 0;
      }
  }
 @media only screen and (min-width: 1158px) {
-.footer-email-input.footer-email-input{
+.footer-email-input{
     margin-bottom: 0;
     min-width: 264px;
   }
@@ -945,20 +968,18 @@ background-color: var(--green);
     transition: color var(--transition-duration-and-functoin), background-color var(--transition-duration-and-functoin), border-color var(--transition-duration-and-functoin), box-shadow var(--transition-duration-and-functoin);
 }
 @media only screen and (min-width: 768px) {
-   .button-items {
+.button-list {
     margin-bottom: 64px;
   }
 }
-@media only screen and (min-width: 1158px) {
-.button-items {    
-    margin-bottom: 72px;
-  }
-}
+
 @media only screen and (min-width: 1158px) {
 .button-list {
     justify-content: center;
+    margin-bottom: 72px;
+    }
   }
-}
+
 .flex-element-link:hover,
 .flex-element-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -1284,7 +1305,7 @@ margin-bottom: 24px;
     align-items: flex-start;
     padding: 0px;
     gap: 24px;  
-    margin-bottom: 40px;
+   
 }
 @media only screen and (min-width: 428px) {
 .mobile-socials{
@@ -1325,7 +1346,6 @@ color: var(--accent-color);
     font-size: 36px;
   }
 }
-
 .mobile-email {
     font-weight: 500;
     font-size: 20px;
